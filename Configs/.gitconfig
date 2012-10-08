@@ -1,0 +1,13 @@
+[user]
+	name = Noein
+	email = noein93@gmail.com
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+	ui = true
+[github]
+	user = Noein
+	token = e3d6b618b78370ae950237358a316078
+[core]
+	editor = vim
