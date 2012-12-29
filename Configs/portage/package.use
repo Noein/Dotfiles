@@ -1,0 +1,14 @@
+x11-drivers/ati-drivers disable-watermark
+media-video/vlc a52 aac alsa libass opengl png xv sdl dts matroska theora vorbis win32codecs dvd taglib bluray dbus ffmpeg flac fontconfig mp3 mpeg ogg opus truetype -bidi
+app-emulation/virtualbox extensions
+kde-base/dolphin thumbnail
+media-sound/clementine lastfm
+>=dev-libs/elfutils-0.155 static-libs
+kde-base/kdebase-kioslaves samba
+kde-base/okular djvu
+dev-util/qt-creator doc examples git
+>=x11-libs/qt-assistant-4.8.4 doc
+>=dev-libs/libxml2-2.9.0-r1 icu
+=x11-libs/qt-webkit-4.8.4 icu
+>=dev-python/PyQt4-4.9.6-r1 script
+
