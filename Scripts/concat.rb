@@ -6,17 +6,13 @@
 # To the extent possible under law, the author(s) have dedicated all copyright and related and neighboring rights to this software to the public domain worldwide. This software is distributed without any warranty.
 # You should have received a copy of the CC0 Public Domain Dedication along with this software. If not, see <http://creativecommons.org/publicdomain/zero/1.0/>.
 
-class StringConcatenator
+module Concatenable
 
-  def initialize(delimiter, filename = nil)
-    @delimiter = delimiter
-    if filename
-      @input = File.open(filename, 'r')
-    else
-      @input = STDIN
-    end
+  def concat
+    get_strings.join(@delimiter)
   end
 
+private
   def get_strings
     strings = []
     while not @input.eof?
@@ -25,14 +21,32 @@ class StringConcatenator
     strings
   end
 
-  def concat
-    get_strings.join(@delimiter)
+end
+
+class StringFileConcatenator
+
+  include Concatenable
+
+  def initialize(delimiter, filename)
+    @delimiter = delimiter
+    @input = File.open(filename, 'r')
+  end
+
+end
+
+class StringStdinConcatenator
+
+  include Concatenable
+
+  def initialize(delimiter)
+    @delimiter = delimiter
+    @input = STDIN
   end
 
 end
 
 if ARGV[1]
-  puts StringConcatenator.new(ARGV[0], ARGV[1]).concat
+  puts StringFileConcatenator.new(ARGV[0], ARGV[1]).concat
 else
-  puts StringConcatenator.new(ARGV[0] || " ").concat
+  puts StringStdinConcatenator.new(ARGV[0] || " ").concat
 end
