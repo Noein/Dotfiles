@@ -6,8 +6,9 @@
 [[ $- != *i* ]] && return
 
 export PATH=/home/natsuo/.cabal/bin:$PATH
+export PATH=/home/natsuo/.gem/ruby/1.9.1/bin:$PATH
+export GEM_HOME=/home/natsuo/.gem/ruby/1.9.1
 export EDITOR="vim"
-export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 # Green color for user prompt
 PS1='\[\e[0;34m\]\w\[\e[m\] \[\e[1;32m\]\$\[\e[m\] \[\e[0;29m\]'
@@ -66,10 +67,13 @@ alias tar.pack='tar czvf'
 alias tar.unpack='tar -zxvf'
 alias backup='tar czvf $(date +backup-%d-%m-%Y-%s.tar.gz)'
 
-unset RUBYOPT
-
 shopt -s histappend
 [[ "${PROMPT_COMMAND}" ]] && PROMPT_COMMAND="$PROMPT_COMMAND;history -a" || PROMPT_COMMAND="history -a"
+
+# RVM stuff
+unset RUBYOPT
+
+export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 if test -f ~/.rvm/scripts/rvm; then
   [ "$(type -t rvm)" = "function" ] || source ~/.rvm/scripts/rvm
