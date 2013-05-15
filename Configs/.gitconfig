@@ -1,13 +1,46 @@
-[user]
-	name = Noein
-	email = noein93@gmail.com
+[core]
+	editor = vim
+	excludesfile = ~/.gitignore_global
+	autocrlf = input
+	whitespace = trailing-space
+	
 [color]
 	diff = auto
 	status = auto
 	branch = auto
 	ui = true
+	
+[alias]
+	c = commit -a
+	cm = commit -am
+	aa = add .
+	co = checkout
+	st = status
+	ri = rebase -i
+	amend = commit --amend
+	delete-branch = "!f() { git branch -D $1 && git push origin :$1; }; f"
+	
+[user]
+	name = Noein
+	email = noein93@gmail.com
+	
+[branch]
+	autosetupmerge = true
+	
+[diff]
+	renames = copies
+	
+[push]
+	default = upstream
+	
 [github]
-	user = Noein
-	token = e3d6b618b78370ae950237358a316078
-[core]
-	editor = vim
+	user = noein
+	
+[credential]
+	helper = cache
+	
+[diff "word"]
+	textconv = strings
+	
+[diff "exif"]
+	textconv = exiftool
