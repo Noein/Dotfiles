@@ -1,4 +1,4 @@
-:set +s +t
+:set +s +t +m
 :set prompt "λ> "
 :set editor vim
 

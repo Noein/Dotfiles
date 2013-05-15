@@ -1,14 +1,57 @@
-x11-drivers/ati-drivers disable-watermark
-media-video/vlc a52 aac alsa libass opengl png xv sdl dts matroska theora vorbis win32codecs dvd taglib bluray dbus ffmpeg flac fontconfig mp3 mpeg ogg opus truetype -bidi
-app-emulation/virtualbox extensions
-kde-base/dolphin thumbnail
-media-sound/clementine lastfm
->=dev-libs/elfutils-0.155 static-libs
-kde-base/kdebase-kioslaves samba
-kde-base/okular djvu
-dev-util/qt-creator doc examples git
->=x11-libs/qt-assistant-4.8.4 doc
->=dev-libs/libxml2-2.9.0-r1 icu
-=x11-libs/qt-webkit-4.8.4 icu
->=dev-python/PyQt4-4.9.6-r1 script
+# drivers
+>=x11-drivers/ati-drivers-13.4 disable-watermark
 
+# chromium
+>=media-libs/mesa-9.1.2-r1 gles2
+>=media-video/ffmpeg-1.0.6 opus
+>=dev-libs/libxml2-2.9.0-r2 icu
+>=dev-qt/qtwebkit-4.8.4 icu
+
+# anki
+>=dev-lang/python-2.7.4:2.7 sqlite
+
+# inkscape
+>=media-libs/lcms-1.19-r1 python
+
+# steam
+>=games-util/steam-meta-0-r20130509 steamruntime
+>=media-libs/libsdl-2.0.0_pre7046 abi_x86_32
+
+# bitcoin
+>=net-p2p/bitcoind-0.8.1 upnp
+>=net-p2p/bitcoin-qt-0.8.1 upnp
+
+# media
+>=media-video/vlc-2.0.6 bluray libass lua opus taglib theora vaapi
+>=media-libs/x264-0.0.20120707 10bit
+>=media-video/mplayer-1.1.1 bluray
+>=media-video/mplayer2-2.0_p20130126 bluray
+
+# languages, VCS, IDE
+>=dev-qt/qthelp-4.8.4 doc
+>=app-editors/emacs-24.3-r1 -alsa -gif -jpeg -png -svg -tiff gsettings gtk toolkit-scroll-bars xft
+>=dev-qt/qt-creator-2.7.0 doc examples git
+>=dev-java/oracle-jdk-bin-1.7.0.21 nsplugin
+>=dev-vcs/subversion-1.7.9 -ruby
+
+# virtualization
+>=app-emulation/virtualbox-4.2.12 extensions
+>=app-emulation/vmware-workstation-9.0.2.1031769 vmware-tools
+
+# KDE
+>=kde-base/kdebase-kioslaves-4.10.3 samba
+>=media-sound/clementine-1.1.1 lastfm moodbar
+>=kde-base/okular-4.10.3 chm djvu ebook
+>=kde-base/dolphin-4.10.3 thumbnail
+>=kde-base/plasma-workspace-4.10.3 python
+
+# other
+>=dev-libs/elfutils-0.155 static-libs
+>=net-fs/cifs-utils-6.0-r1 -acl -upcall
+>=net-misc/tor-0.2.4.12_alpha nat-pmp upnp
+>=app-text/ghostscript-gpl-9.06 cups
+>=sys-apps/gptfdisk-0.8.6 ncurses
+>=media-gfx/graphviz-2.28.0 devil lasi postscript
+>=sys-block/gparted-0.16.1 fat ntfs
+>=app-misc/anki-2.0.8 -recording -sound
+>=app-office/libreoffice-4.0.3.3 java

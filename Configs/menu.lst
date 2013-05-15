@@ -31,14 +31,14 @@ color light-blue/black blue/white
 # (0) Gentoo Linux Main
 title Gentoo Linux Main
 root (hd0,0)
-kernel /boot/kernel-genkernel-x86_64-3.7.1-gentoo real_root=/dev/sda2 rootfstype=ext4 vga=0x0324 ipv6.disable=1 ro
-initrd /boot/initramfs-genkernel-x86_64-3.7.1-gentoo
+kernel /boot/kernel-genkernel-x86_64-3.9.2-gentoo real_root=/dev/sda2 rootfstype=ext4 vga=0x0324 ipv6.disable=1 net.ifnames=0 ro
+initrd /boot/initramfs-genkernel-x86_64-3.9.2-gentoo
 
 # (1) Gentoo Linux Fallback
 title Gentoo Linux Fallback
 root (hd0,0)
-kernel /boot/kernel-genkernel-x86_64-3.7.0-gentoo real_root=/dev/sda2 rootfstype=ext4 ro init_opts=1
-initrd /boot/initramfs-genkernel-x86_64-3.7.0-gentoo
+kernel /boot/kernel-genkernel-x86_64-3.9.0-gentoo real_root=/dev/sda2 rootfstype=ext4 ro init_opts=1
+initrd /boot/initramfs-genkernel-x86_64-3.9.0-gentoo
 
 # (2) Memtest86+
 title MemTest86+

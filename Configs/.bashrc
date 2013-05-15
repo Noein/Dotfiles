@@ -9,6 +9,7 @@ export PATH=/home/natsuo/.cabal/bin:$PATH
 export PATH=/home/natsuo/.gem/ruby/1.9.1/bin:$PATH
 export GEM_HOME=/home/natsuo/.gem/ruby/1.9.1
 export EDITOR="vim"
+export SDL_AUDIODRIVER=alsa
 
 # Green color for user prompt
 PS1='\[\e[0;34m\]\w\[\e[m\] \[\e[1;32m\]\$\[\e[m\] \[\e[0;29m\]'
@@ -22,9 +23,11 @@ alias df='df -h'
 alias du='du -c -h'
 alias mkdir='mkdir -p -v'
 #alias ping='ping -c 5'
+alias cd='cd '
 alias ..='cd ..'
 alias .='pwd'
 alias ruby='ruby -w'
+alias grep='grep -i'
 
 # new commands
 alias da='date "+%A, %B %d, %Y [%T]"'
@@ -32,6 +35,7 @@ alias du1='du --max-depth=1'
 alias hist='history | grep $1'      # requires an argument
 alias openports='netstat --all --numeric --programs --inet'
 alias pg='ps -Af | grep $1'         # requires an argument
+alias qgit='qgit4'
 
 # privileged access
 if [ $UID -ne 0 ]; then
@@ -40,7 +44,7 @@ if [ $UID -ne 0 ]; then
     alias svim='sudo vim'
     alias skill='sudo pkill'
     alias smount='sudo mount'
-    alias update='layman -S && eix-sync && emerge -uDNnav --with-bdeps=y world'
+    alias update='layman -S && eix-sync && emerge -av --update --newuse --deep --with-bdeps=y @world'
 fi
 
 # ls
@@ -78,3 +82,9 @@ export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 if test -f ~/.rvm/scripts/rvm; then
   [ "$(type -t rvm)" = "function" ] || source ~/.rvm/scripts/rvm
 fi
+
+export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=lcd -Dswing.aatext=true -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel'
+export JAVA_FONTS=/usr/share/fonts/TTF
+
+# Prevent wine from adding menu entries and desktop links
+export WINEDLLOVERRIDES='winemenubuilder.exe=d'
