@@ -19,6 +19,8 @@
 	ri = rebase -i
 	amend = commit --amend
 	delete-branch = "!f() { git branch -D $1 && git push origin :$1; }; f"
+  l = "!git log --reverse --pretty=format:\"%h|%ar|%s\" | awk -F '|' '{ printf \"%s | %-14s | %s\\n\", $1, $2, $3 }'"
+  la = "!git log --reverse --pretty=format:\"%h|%an|%ar|%s\" | awk -F '|' '{ printf \"%s | %-10s | %-14s | %s\\n\", $1, $2, $3, $4 }'"
 	
 [user]
 	name = Noein
@@ -40,7 +42,12 @@
 	helper = cache
 	
 [diff "word"]
+  binary = true
 	textconv = strings
 	
+[diff "odt"]
+    binary = true
+    textconv = /usr/bin/odt2txt
+
 [diff "exif"]
 	textconv = exiftool
