@@ -40,7 +40,6 @@
 
 # KDE
 >=kde-base/kdebase-kioslaves-4.10.3 samba
->=media-sound/clementine-1.1.1 lastfm moodbar
 >=kde-base/okular-4.10.3 chm djvu ebook
 >=kde-base/dolphin-4.10.3 thumbnail
 >=kde-base/plasma-workspace-4.10.3 python
@@ -54,4 +53,8 @@
 >=media-gfx/graphviz-2.28.0 devil lasi postscript
 >=sys-block/gparted-0.16.1 fat ntfs
 >=app-misc/anki-2.0.8 -recording -sound
->=app-office/libreoffice-4.0.3.3 java
+>=app-office/libreoffice-4.0.3.3 java jemalloc
+>=net-im/psi-0.15 plugins extras jingle enchant iconsets webkit
+#>=dev-libs/libpthread-stubs-0.3-r1 abi_x86_32
+>=media-gfx/imagemagick-6.8.5.4 -fftw
+>=app-emulation/wine-1.5.31 odbc openal
