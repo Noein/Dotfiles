@@ -12,6 +12,5 @@ require 'wirble'
 Wirble.init
 Wirble.colorize
 
-def r(s)
-  require s
-end
+alias :r :require
+

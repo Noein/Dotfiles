@@ -76,14 +76,14 @@ shopt -s histappend
 
 # RVM stuff
 unset RUBYOPT
-
+unset GEM_HOME
 export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
 if test -f ~/.rvm/scripts/rvm; then
   [ "$(type -t rvm)" = "function" ] || source ~/.rvm/scripts/rvm
 fi
 
-export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=lcd -Dswing.aatext=true -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel'
+export I_WANT_GLOBAL_JAVA_OPTIONS=true
+export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=lcd -Dswing.aatext=true -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel' #-Djava.security.egd=file:/dev/urandom
 export JAVA_FONTS=/usr/share/fonts/TTF
 
 # Prevent wine from adding menu entries and desktop links

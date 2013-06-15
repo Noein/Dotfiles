@@ -1,4 +1,2 @@
-#>=x11-base/xorg-server-1.14.0
-#>=app-misc/pax-utils-0.6
 #>=www-client/chromium-27.0.1453.3
-#=dev-java/sbt-bin-0.13.0_pre1
+>=dev-libs/crypto++-5.6.1-r3

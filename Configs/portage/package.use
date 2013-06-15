@@ -31,7 +31,8 @@
 >=dev-qt/qthelp-4.8.4 doc
 >=app-editors/emacs-24.3-r1 -alsa -gif -jpeg -png -svg -tiff gsettings gtk toolkit-scroll-bars xft
 >=dev-qt/qt-creator-2.7.0 doc examples git
->=dev-java/oracle-jdk-bin-1.7.0.21 nsplugin
+>=dev-java/oracle-jdk-bin-1.7.0.21 nsplugin jce
+>=dev-java/oracle-jre-bin-1.7.0.21 nsplugin jce
 >=dev-vcs/subversion-1.7.9 -ruby
 
 # virtualization
@@ -43,6 +44,7 @@
 >=kde-base/okular-4.10.3 chm djvu ebook
 >=kde-base/dolphin-4.10.3 thumbnail
 >=kde-base/plasma-workspace-4.10.3 python
+>=kde-base/dolphin-plugins-4.10.3 git
 
 # other
 >=dev-libs/elfutils-0.155 static-libs
@@ -55,6 +57,10 @@
 >=app-misc/anki-2.0.8 -recording -sound
 >=app-office/libreoffice-4.0.3.3 java jemalloc
 >=net-im/psi-0.15 plugins extras jingle enchant iconsets webkit
-#>=dev-libs/libpthread-stubs-0.3-r1 abi_x86_32
 >=media-gfx/imagemagick-6.8.5.4 -fftw
 >=app-emulation/wine-1.5.31 odbc openal
+=dev-libs/leveldb-1.9.0-r5 -snappy
+>=kde-base/smokeqt-4.10.4 qthelp
+>=kde-base/qtruby-4.10.4 qthelp ruby19
+>=dev-lang/fpc-2.6.0 source
+>=net-p2p/fms-0.3.70 frost

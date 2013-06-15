@@ -18,6 +18,7 @@
 	st = status
 	ri = rebase -i
 	amend = commit --amend -am
+	force-merge = merge -X theirs
 	delete-branch = "!f() { git branch -D $1 && git push origin :$1; }; f"
 	l = "!git log --reverse --pretty=format:\"%h|%ar|%s\" | awk -F '|' '{ printf \"%s | %-14s | %s\\n\", $1, $2, $3 }'"
 	la = "!git log --reverse --pretty=format:\"%h|%an|%ar|%s\" | awk -F '|' '{ printf \"%s | %-10s | %-14s | %s\\n\", $1, $2, $3, $4 }'"
