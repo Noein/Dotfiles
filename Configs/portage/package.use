@@ -6,6 +6,7 @@
 >=media-video/ffmpeg-1.0.6 opus
 >=dev-libs/libxml2-2.9.0-r2 icu
 >=dev-qt/qtwebkit-4.8.4 icu
+>=media-libs/harfbuzz-0.9.18-r1 icu
 
 # anki
 >=dev-lang/python-2.7.4:2.7 sqlite
@@ -60,7 +61,12 @@
 >=media-gfx/imagemagick-6.8.5.4 -fftw
 >=app-emulation/wine-1.5.31 odbc openal
 =dev-libs/leveldb-1.9.0-r5 -snappy
->=kde-base/smokeqt-4.10.4 qthelp
+>=kde-base/smokeqt-4.10.4 qthelp webkit qscintilla
 >=kde-base/qtruby-4.10.4 qthelp ruby19
+>=kde-base/qtruby3-9999 qthelp webkit
 >=dev-lang/fpc-2.6.0 source
 >=net-p2p/fms-0.3.70 frost
+>=dev-dotnet/mono-addins-0.6.2 gtk
+>=sys-libs/talloc-2.0.8 python
+>=net-p2p/eiskaltdcpp-2.2.8 dht upnp -libnotify -cli -spell
+>=net-misc/openssh-6.2_p2 -ldap

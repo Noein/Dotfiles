@@ -24,7 +24,7 @@
 	la = "!git log --reverse --pretty=format:\"%h|%an|%ar|%s\" | awk -F '|' '{ printf \"%s | %-10s | %-14s | %s\\n\", $1, $2, $3, $4 }'"
 	
 [user]
-	name = Noein
+	name = Vladislav Mileshkin
 	email = noein93@gmail.com
 
 [merge]

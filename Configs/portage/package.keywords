@@ -1,4 +1,4 @@
 dev-lang/scala **
 >=app-admin/eselect-scala-0.1 **
+kde-base/qtruby3 **
 net-im/psi **
-#>=media-libs/libsdl-2.0.0_pre7238 **
