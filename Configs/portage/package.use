@@ -23,7 +23,7 @@
 >=net-p2p/bitcoin-qt-0.8.1 upnp
 
 # media
->=media-video/vlc-2.0.6 bluray libass lua opus taglib theora vaapi
+>=media-video/vlc-2.0.6 bluray libass lua opus taglib theora vaapi -libnotify -gcrypt -gnome -svg
 >=media-libs/x264-0.0.20120707 10bit
 >=media-video/mplayer-1.1.1 bluray
 >=media-video/mplayer2-2.0_p20130126 bluray
@@ -31,10 +31,19 @@
 # languages, VCS, IDE
 >=dev-qt/qthelp-4.8.4 doc
 >=app-editors/emacs-24.3-r1 -alsa -gif -jpeg -png -svg -tiff gsettings gtk toolkit-scroll-bars xft
->=dev-qt/qt-creator-2.7.0 doc examples git
+>=dev-qt/qt-creator-2.7.0 doc examples git android autotools bazaar cmake mercurial subversion valgrind
+dev-qt/designer -phonon
 >=dev-java/oracle-jdk-bin-1.7.0.21 nsplugin jce
 >=dev-java/oracle-jre-bin-1.7.0.21 nsplugin jce
 >=dev-vcs/subversion-1.7.9 -ruby
+>=dev-ruby/rdoc-4.0.1 ruby_targets_ruby20
+>=virtual/rubygems-6 ruby_targets_ruby20
+>=dev-ruby/json-1.8.0 ruby_targets_ruby20
+>=dev-ruby/rake-0.9.6 ruby_targets_ruby20
+>=dev-ruby/rubygems-2.0.3 ruby_targets_ruby20
+>=dev-ruby/racc-1.4.9 ruby_targets_ruby20
+sys-devel/clang cling
+>=sys-devel/llvm-3.3-r1 clang cling video_cards_radeon
 
 # virtualization
 >=app-emulation/virtualbox-4.2.12 extensions
@@ -70,3 +79,11 @@
 >=sys-libs/talloc-2.0.8 python
 >=net-p2p/eiskaltdcpp-2.2.8 dht upnp -libnotify -cli -spell
 >=net-misc/openssh-6.2_p2 -ldap
+>=sys-apps/smartmontools-6.1 minimal
+>=app-crypt/gcr-3.8.2 gtk
+>=net-im/psimedia-9999 extras
+net-im/psi-plugins-meta captchaforms cleaner conferencelogger contentdownloader extendedmenu extendedoptions gmailservice historykeeper image otr qipxstatuses skins stopspam translate videostatus watcher autoreply
+>=net-dns/pdnsd-1.2.9a isdn
+>=app-cdr/cuetools-1.3.1-r2 extras
+>=media-libs/opencv-2.4.5 ffmpeg
+>=media-video/qgifer-0.2.1 imagemagick

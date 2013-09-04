@@ -44,7 +44,8 @@ if [ $UID -ne 0 ]; then
     alias svim='sudo vim'
     alias skill='sudo pkill'
     alias smount='sudo mount'
-    alias update='layman -S && eix-sync && emerge -av --update --newuse --deep --with-bdeps=y @world'
+    alias update='sudo layman -S && sudo eix-sync && sudo emerge -av --update --newuse --deep --with-bdeps=y @world'
+    alias postupdate='sudo emerge --depclean && sudo revdep-rebuild'
 fi
 
 # ls

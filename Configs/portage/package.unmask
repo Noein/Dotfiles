@@ -1,8 +1,10 @@
 dev-lang/scala
+dev-lang/cling-bin
+net-im/psimedia
 kde-base/qtruby3
 net-im/psi
-=media-libs/libsdl-2.0.0_pre7238
+media-libs/libsdl
 app-emulation/emul-linux-x86-xlibs
 x11-libs/libXft
-=media-libs/fontconfig-2.10.2-r1
+media-libs/fontconfig
 media-libs/freetype
