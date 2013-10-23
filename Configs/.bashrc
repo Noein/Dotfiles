@@ -5,9 +5,8 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-export PATH=/home/natsuo/.cabal/bin:$PATH
-export PATH=/home/natsuo/.gem/ruby/1.9.1/bin:$PATH
-export GEM_HOME=/home/natsuo/.gem/ruby/1.9.1
+export PATH=$HOME/.cabal/bin:$PATH
+export PATH=$HOME/.gem/ruby/2.0.0/bin/:$PATH
 export EDITOR="vim"
 export SDL_AUDIODRIVER=alsa
 
@@ -76,16 +75,16 @@ shopt -s histappend
 [[ "${PROMPT_COMMAND}" ]] && PROMPT_COMMAND="$PROMPT_COMMAND;history -a" || PROMPT_COMMAND="history -a"
 
 # RVM stuff
-unset RUBYOPT
+#unset RUBYOPT
 unset GEM_HOME
-export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+unset RUBYLIB
 if test -f ~/.rvm/scripts/rvm; then
   [ "$(type -t rvm)" = "function" ] || source ~/.rvm/scripts/rvm
 fi
 
-export I_WANT_GLOBAL_JAVA_OPTIONS=true
-export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=lcd -Dswing.aatext=true -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel' #-Djava.security.egd=file:/dev/urandom
-export JAVA_FONTS=/usr/share/fonts/TTF
+#export I_WANT_GLOBAL_JAVA_OPTIONS=true
+#export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=lcd -Dswing.aatext=true -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel -Djavafx.userAgentStylesheetUrl=modena' #-Djava.security.egd=file:/dev/urandom
+#export JAVA_FONTS=/usr/share/fonts/TTF
 
 # Prevent wine from adding menu entries and desktop links
 export WINEDLLOVERRIDES='winemenubuilder.exe=d'

@@ -17,6 +17,7 @@
 # steam
 >=games-util/steam-meta-0-r20130509 steamruntime
 >=media-libs/libsdl-2.0.0_pre7046 abi_x86_32
+games-util/steam-launcher steamruntime
 
 # bitcoin
 >=net-p2p/bitcoind-0.8.1 upnp
@@ -55,6 +56,7 @@ sys-devel/clang cling
 >=kde-base/dolphin-4.10.3 thumbnail
 >=kde-base/plasma-workspace-4.10.3 python
 >=kde-base/dolphin-plugins-4.10.3 git
+>=media-sound/clementine-1.1.1 ayatana googledrive lastfm moodbar projectm
 
 # other
 >=dev-libs/elfutils-0.155 static-libs
@@ -87,3 +89,15 @@ net-im/psi-plugins-meta captchaforms cleaner conferencelogger contentdownloader 
 >=app-cdr/cuetools-1.3.1-r2 extras
 >=media-libs/opencv-2.4.5 ffmpeg
 >=media-video/qgifer-0.2.1 imagemagick
+>=dev-libs/thrift-0.9.0 cpp java -ruby
+>=net-analyzer/wireshark-1.10.2 crypt -gtk2 qt4
+dev-libs/leveldb -snappy
+media-plugins/alsa-plugins jack
+media-sound/fluidsynth jack
+media-sound/qsynth jack
+media-sound/vmpk jack
+>=media-sound/hydrogen-0.9.5 jack ladspa
+>=media-libs/libsamplerate-0.1.8-r1 sndfile
+>=app-office/calligra-2.7.4 -calligra_features_author -calligra_features_stage -calligra_features_words -calligra_features_plan
+>=dev-libs/protobuf-2.5.0 python
+>=dev-db/unixODBC-2.3.1-r1 -minimal

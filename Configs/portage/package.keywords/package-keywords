@@ -3,6 +3,7 @@ dev-lang/cling **
 >=app-admin/eselect-scala-0.1 **
 kde-base/qtruby3 **
 net-im/psi **
+=dev-libs/thrift-0.9.9999-r1 **
 >=sys-apps/anything-sync-daemon-3.14 **
 =net-im/psimedia-9999 **
 =net-im/psi-historykeeper-9999 **
@@ -26,3 +27,4 @@ net-im/psi **
 =net-im/psi-conferencelogger-9999 **
 =net-im/psi-image-9999 **
 =net-im/psi-autoreply-9999 **
+=dev-db/unixodbc-gui-qt-9999 **

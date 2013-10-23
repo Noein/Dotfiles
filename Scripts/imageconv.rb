@@ -8,30 +8,21 @@
 
 class BatchImageConverter
 
-  def initialize(folder_path, new_format)
-    @path = folder_path
+  def initialize(source_path, dest_path, old_format, new_format)
+    @path = source_path
+    @dest_path = dest_path
+    @old_format = old_format
     @format = new_format
   end
 
   def convert
-    filenames.each_line do |filename|
-      filename.chop!
-      %x[ convert #{@path+filename} #{@path+filename[/[a-z0-9]*/i] + ".#{@format}"} ]
-      remove(@path + filename)
+    Dir["#{@path}/*.#{@old_format}"].each do |filename|
+      %x[ convert #{filename} #{@path+filename[/[a-z0-9]*/i] + ".#{@format}"} ]
     end
-  end
-
-private
-  def filenames
-    %x[ ls -1 #{@path} ]
-  end
-
-  def remove(filename)
-    %x[ rm #{filename} ]
   end
 
 end
 
 if $0 == __FILE__
-  BatchImageConverter.new(ARGV[0], ARGV[1]).convert
+  BatchImageConverter.new(ARGV[0], ARGV[1], ARGV[2], ARGV[3]).convert
 end
