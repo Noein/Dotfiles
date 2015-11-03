@@ -6,9 +6,14 @@
 [[ $- != *i* ]] && return
 
 export PATH=$HOME/.cabal/bin:$PATH
-export PATH=$HOME/.gem/ruby/2.0.0/bin/:$PATH
-export EDITOR="vim"
+export EDITOR=vim
 export SDL_AUDIODRIVER=alsa
+#export LANG=ru_RU.UTF-8
+export WINEARCH=win32
+export SDL_JOYSTICK_DEVICE=/dev/input/event5
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+source ~/.rvm/scripts/rvm
 
 # Green color for user prompt
 PS1='\[\e[0;34m\]\w\[\e[m\] \[\e[1;32m\]\$\[\e[m\] \[\e[0;29m\]'
@@ -35,6 +40,9 @@ alias hist='history | grep $1'      # requires an argument
 alias openports='netstat --all --numeric --programs --inet'
 alias pg='ps -Af | grep $1'         # requires an argument
 alias qgit='qgit4'
+alias checkNameConflicts='find . -type d | tr A-Z a-z | sort | uniq -c | sort -nr | grep -v "^  *1 " && find . -type f | tr A-Z a-z | sort | uniq -c | sort -nr | grep -v "^  *1 "'
+alias normalizeNames='find . -depth -mindepth 1 -exec mvcase -l {} \; | grep "Could not move"'
+alias qmake5='/usr/lib64/qt5/bin/qmake'
 
 # privileged access
 if [ $UID -ne 0 ]; then
@@ -43,8 +51,9 @@ if [ $UID -ne 0 ]; then
     alias svim='sudo vim'
     alias skill='sudo pkill'
     alias smount='sudo mount'
-    alias update='sudo layman -S && sudo eix-sync && sudo emerge -av --update --newuse --deep --with-bdeps=y @world'
+    alias update='sudo emerge --sync && sudo eix-update && eix-diff && sudo emerge -av --update --newuse --deep --with-bdeps=y @world'
     alias postupdate='sudo emerge --depclean && sudo revdep-rebuild'
+    alias qemustuff='sudo modprobe kvm-amd kvm vfio bridge tun && sudo /etc/init.d/apparmor stop && sudo /etc/init.d/samba start && sudo /etc/init.d/libvirtd start'
 fi
 
 # ls
@@ -73,14 +82,6 @@ alias backup='tar czvf $(date +backup-%d-%m-%Y-%s.tar.gz)'
 
 shopt -s histappend
 [[ "${PROMPT_COMMAND}" ]] && PROMPT_COMMAND="$PROMPT_COMMAND;history -a" || PROMPT_COMMAND="history -a"
-
-# RVM stuff
-#unset RUBYOPT
-unset GEM_HOME
-unset RUBYLIB
-if test -f ~/.rvm/scripts/rvm; then
-  [ "$(type -t rvm)" = "function" ] || source ~/.rvm/scripts/rvm
-fi
 
 #export I_WANT_GLOBAL_JAVA_OPTIONS=true
 #export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=lcd -Dswing.aatext=true -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel -Djavafx.userAgentStylesheetUrl=modena' #-Djava.security.egd=file:/dev/urandom

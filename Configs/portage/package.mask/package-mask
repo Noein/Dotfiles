@@ -1,1 +1,22 @@
+*/*::emery
+*/*::nektoo
+*/*::qt
+*/*::rion
+*/*::roslin
+*/*::steam-overlay
+*/*::triquetra
+*/*::luman
+#*/*::local_overlay
+*/*::gamerlay
+*/*::kde
+*/*::haskell
 
+>app-text/poppler-0.32.0
+>media-libs/glew-1.10.0-r2
+>dev-libs/boost-1.56.0-r1
+>dev-util/boost-build-1.56.0
+kde-apps/ffmpegthumbs:4
+kde-apps/kfind:4
+=x11-libs/pixman-0.33.2
+>=www-client/firefox-kde-opensuse-40.0.2
+>sys-kernel/gentoo-sources-4.2.4

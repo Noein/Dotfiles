@@ -3,6 +3,7 @@
 	excludesfile = ~/.gitignore_global
 	autocrlf = input
 	whitespace = trailing-space
+	symlinks = true
 	
 [color]
 	diff = auto
@@ -11,24 +12,26 @@
 	ui = true
 	
 [alias]
-	c = commit -a
-	cm = commit -am
+	c = commit -S -a
+	cm = commit -S -am
 	aa = add .
 	co = checkout
 	st = status
 	ri = rebase -i
-	amend = commit --amend -am
+	amend = commit -S --amend -am
 	force-merge = merge -X theirs
 	delete-branch = "!f() { git branch -D $1 && git push origin :$1; }; f"
-	l = "!git log --reverse --pretty=format:\"%h|%ar|%s\" | awk -F '|' '{ printf \"%s | %-14s | %s\\n\", $1, $2, $3 }'"
-	la = "!git log --reverse --pretty=format:\"%h|%an|%ar|%s\" | awk -F '|' '{ printf \"%s | %-10s | %-14s | %s\\n\", $1, $2, $3, $4 }'"
-	
+	l = "!git log --reverse --pretty=format:\"%h|%ar|%s\" | awk -F '|' '{ printf \"%s| %-14s | %s\\n\", $1, $2, $3 }'"
+	la = "!git log --reverse --pretty=format:\"%h|%G?|%an|%ar|%s\" | awk -F '|' '{ printf \"%s|%s| %-10s | %-14s | %s\\n\", $1, $2, $3, $4, $5 }'"
+	cleanall = clean -dxf
+
 [user]
 	name = Vladislav Mileshkin
 	email = noein93@gmail.com
+	signingkey = 57EE184C
 
 [merge]
-	ff = only
+	#ff = only
 	commit = no
 
 [branch]
@@ -41,7 +44,7 @@
 	default = upstream
 	
 [github]
-	user = noein
+	user = YoukaiCat
 	
 [credential]
 	helper = cache
@@ -56,3 +59,8 @@
 
 [diff "exif"]
 	textconv = exiftool
+
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true

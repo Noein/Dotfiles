@@ -26,27 +26,52 @@
 # general configuration:
 timeout   5
 default   0
+#password --encrypted $1$cLHVh1$w/K2BiRsg9sOYlegZCByy.
 color light-blue/black blue/white
 
-# (0) Gentoo Linux Main
-title Gentoo Linux Main
+# (0) Gentoo Linux Main Fglrx
+title Gentoo Linux Main Fglrx
 root (hd0,0)
-kernel /boot/kernel-genkernel-x86_64-3.11.5-gentoo real_root=/dev/sda2 rootfstype=ext4 vga=0x0324 fbcon=scrollback:64k ipv6.disable=1 net.ifnames=0
-initrd /boot/initramfs-genkernel-x86_64-3.11.5-gentoo
+kernel /boot/kernel-genkernel-x86_64-4.2.4-gentoo real_root=/dev/sda2 rootfstype=ext4 vga=0x0324 fbcon=scrollback:64k net.ifnames=0 apparmor=1 security=apparmor amd_iommu=on iommu=on nomodeset 
+#modprobe.blacklist=drm,drm_kms_helper,radeon,uvcvideo,ttm,videodev,videobuf2_core,videobuf2_memops,videobuf2_vmalloc
+initrd /boot/initramfs-genkernel-x86_64-4.2.4-gentoo
+# ipv6.disable=1
 
-# (1) Gentoo Linux Fallback
+# (1) Gentoo Linux Main Radeon
+title Gentoo Linux Main Radeon
+root (hd0,0)
+kernel /boot/kernel-genkernel-x86_64-4.2.4-gentoo real_root=/dev/sda2 rootfstype=ext4 vga=0x0324 fbcon=scrollback:64k net.ifnames=0 apparmor=1 security=apparmor amd_iommu=on iommu=on radeon.modeset=1 modprobe.blacklist=fglrx
+initrd /boot/initramfs-genkernel-x86_64-4.2.4-gentoo
+
+# (2) Gentoo Linux 2.6
+title Gentoo Linux 2.6
+#lock
+root (hd0,0)
+kernel /boot/kernel-genkernel-x86_64-2.6.39-pf4 real_root=/dev/sda2 rootfstype=ext4 vga=0x0324 fbcon=scrollback:64k net.ifnames=0 apparmor=1 security=apparmor
+initrd /boot/initramfs-genkernel-x86_64-2.6.39-pf4
+
+# (3) Gentoo Linux Xen
+title Gentoo Linux Xen
+root (hd0,0)
+kernel /boot/xen.gz dom0_mem=5120M real_root=/dev/sda2 rootfstype=ext4 vga=0x0324 net.ifnames=0
+module /boot/vmlinux real_root=/dev/sda2 rootfstype=ext4 vga=0x0324 net.ifnames=0
+module /boot/initramfs-genkernel-x86_64-4.2.4-gentoo
+
+# (4) Gentoo Linux Fallback
 title Gentoo Linux Fallback
+#lock
 root (hd0,0)
-kernel /boot/kernel-genkernel-x86_64-3.11.4-gentoo real_root=/dev/sda2 rootfstype=ext4 ro init_opts=1
-initrd /boot/initramfs-genkernel-x86_64-3.11.4-gentoo
+kernel /boot/kernel-genkernel-x86_64-4.1.3-gentoo real_root=/dev/sda2 rootfstype=ext4 ro init_opts=1
+initrd /boot/initramfs-genkernel-x86_64-4.1.3-gentoo
 
-# (2) Memtest86+
+# (5) Memtest86+
 title MemTest86+
 root (hd0,0)
 kernel /boot/memtest86plus/memtest
 
-# (3) Windows Seven
+# (6) Windows Seven
 # title Windows Seven
 # rootnoverify (hd0,3)
 # makeactive
 # chainloader +1
+

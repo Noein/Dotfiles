@@ -13,7 +13,6 @@
 ::1		localhost.localdomain	localhost sweethome
 192.168.0.1	router
 192.168.0.3	laptop
-0.0.0.0		idnet.ua-corp.com
 0.0.0.0		www.google-analytics.com
 0.0.0.0		ssl­.google-analytics.com
 0.0.0.0		cou­nter.yadro.ru
@@ -37,3 +36,4 @@
 # from your network provider (if any) or from your regional registry (ARIN, 
 # APNIC, LACNIC, RIPE NCC, or AfriNIC.)
 #
+
