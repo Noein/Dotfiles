@@ -1,35 +1,5 @@
-sys-apps/lsadb **
+*/*::nameless **
+*/*::local_overlay **
 
-net-im/psi **
-net-im/psimedia **
-net-im/psi-* **
-
-dev-db/unixodbc-gui-qt **
-
-app-office/QtBitcoinTrader **
-
-media-gfx/digikam **
-
-net-im/qtox **
-net-im/utox **
-
-x11-libs/libqxt **
-
-kde-frameworks/* **
-kde-plasma/* **
-kde-apps/* **
-
-net-libs/libktorrent **
 net-libs/tox **
-
-dev-util/douml **
-
-media-libs/libfilteraudio **
-
-games-emulation/gens **
-games-emulation/gens-gs **
-
-net-p2p/ktorrent **
-net-p2p/netsukuku-c **
-
-app-portage/layman-dbtools **
+net-im/qtox **

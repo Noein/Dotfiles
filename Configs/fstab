@@ -20,10 +20,8 @@
 /dev/sda3   none           swap         sw 0 0
 /dev/sdb1   /home          ext4         defaults,noatime 0 2
 /dev/sda5   /mnt/other     ext4         defaults,noatime 0 2
-/dev/sda6   /mnt/prefixes  lowntfs-3g   ignore_case,windows_names,noatime,uid=3003,gid=100,umask=0022 0 2
 /dev/cdrom  /mnt/cdrom     auto         noauto,user 0 0
 /dev/dvd    /media/dvd     auto         noauto,user 0 0
 /dev/fd0    /media/fl      auto         noauto,user 0 0
 #none /sys/kernel/security securityfs defaults 0 0
 #tmpfs /home/natsuo/.mozilla/firefox/natsuo/Cache tmpfs defaults,noatime,mode=1777,size=512M 0 0
-

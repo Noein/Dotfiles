@@ -45,3 +45,5 @@ Thumbs.db
 .project
 *.sublime-project
 *.sublime-workspace
+.idea/
+

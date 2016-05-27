@@ -1,251 +1,94 @@
-# drivers
-x11-drivers/ati-drivers disable-watermark modules qt4
-x11-libs/libdrm video_cards_radeon
-
-# chromium
-media-libs/mesa gles2 llvm-shared-libs d3d9 vdpau r600-llvm-compiler wayland
-media-video/ffmpeg opus webp v4l
-dev-libs/libxml2 icu
-
-media-libs/harfbuzz icu
-
-# anki
-dev-lang/python sqlite
-
-# inkscape
-media-libs/lcms python
-
-# steam
-games-util/steam-meta steamruntime
-media-libs/libsdl abi_x86_32
-media-libs/libsdl2 abi_x86_32
-games-util/steam-launcher steamruntime
-
-# bitcoin
-net-p2p/bitcoind upnp
-net-p2p/bitcoin-qt upnp
-
-# media
-media-video/vlc bluray libass lua opus taglib theora vaapi -libnotify -gcrypt -gnome -svg vdpau vpx x265 pulseaudio -libav postproc
-media-libs/x264 10bit
-media-video/mplayer bluray
-
-# languages, VCS, IDE
-app-editors/emacs -alsa -gif -jpeg -png -svg -tiff gsettings gtk toolkit-scroll-bars xft
-
-dev-java/oracle-jdk-bin nsplugin jce
-dev-java/oracle-jre-bin nsplugin jce
-dev-vcs/subversion -ruby
-sys-devel/clang cling
-sys-devel/llvm multitarget clang cling video_cards_radeon
-dev-libs/libpcre pcre16
-x11-libs/libxcb xkb
-dev-util/qbs gui qt5 -doc
-sci-physics/root -ruby -ldap -math -memstat -opengl -openmp -python -python_targets_python2_7 -ssl -tiff -xml
-
-# virtualization
-app-emulation/virtualbox extensions qt4
-app-emulation/vmware-workstation vmware-tools
-
-# KDE
-kde-apps/kdebase-kioslaves minimal
-kde-apps/kio-extras samba
-kde-apps/okular chm djvu ebook -tiff -jpeg
-kde-apps/dolphin thumbnail
-kde-apps/dolphin-plugins git
-media-sound/clementine ayatana googledrive lastfm moodbar projectm
-
-# other
-dev-libs/elfutils static-libs
-net-fs/cifs-utils -acl -upcall -ads
-net-misc/tor nat-pmp upnp
-app-text/ghostscript-gpl cups
-sys-apps/gptfdisk ncurses
-media-gfx/graphviz devil lasi postscript python -ruby
-sys-block/gparted fat ntfs -kde
-app-misc/anki -recording -sound
-app-office/libreoffice java jemalloc
-net-im/psi plugins extras jingle enchant iconsets webkit
-media-gfx/imagemagick -fftw
-app-emulation/wine odbc openal -vaapi
-dev-libs/leveldb -snappy
-kde-base/smokeqt qthelp webkit qscintilla
-kde-base/qtruby qthelp
-dev-lang/fpc source
-net-p2p/fms frost
-dev-dotnet/mono-addins gtk
-sys-libs/talloc python
-net-p2p/eiskaltdcpp dht upnp -libnotify -cli -spell qt4
-net-misc/openssh -ldap
-sys-apps/smartmontools minimal
+#dev-qt/qt-mobility contacts multimedia tools connectivity feedback publishsubscribe sensors serviceframework systeminfo versit -doc
+#net-p2p/eiskaltdcpp dht -libnotify -cli -spell
+#sci-physics/root -X -ruby -ldap -math -memstat -opengl -openmp -python -ssl -tiff -xml
+#sys-firmware/amdgpu-ucode legacy
+#www-servers/nginx nginx_modules_http_echo nginx_modules_http_push_stream nginx_modules_http_slowfs_cache nginx_modules_http_stub_status nginx_modules_http_upload_progress
 app-crypt/gcr gtk
-net-im/psimedia extras
-net-im/psi-plugins-meta captchaforms cleaner conferencelogger contentdownloader extendedmenu extendedoptions gmailservice historykeeper image otr qipxstatuses skins stopspam translate videostatus watcher autoreply
-net-dns/pdnsd isdn
-app-cdr/cuetools extras
-media-video/qgifer imagemagick
-net-analyzer/wireshark crypt -gtk2 -gtk3
-dev-libs/leveldb -snappy
-media-sound/pulseaudio alsa -bluetooth -gtk -asyncns -ipv6 jack qt4
-media-plugins/alsa-plugins jack ffmpeg pulseaudio
-media-sound/fluidsynth jack
-media-sound/qsynth jack
-media-sound/vmpk jack
-media-sound/hydrogen jack ladspa
-media-libs/libsamplerate sndfile
-app-office/calligra -calligra_features_author -calligra_features_stage -calligra_features_words -calligra_features_plan
-dev-libs/protobuf python
-dev-db/unixODBC -minimal
-x11-themes/qtcurve gtk
-net-misc/bfgminer scrypt proxy_stratum proxy_getwork proxy cpumining
-www-client/seamonkey -chatzilla crypt gstreamer system-cairo system-icu system-jpeg system-sqlite
-dev-db/sqlite secure-delete
-media-plugins/gst-plugins-meta ffmpeg
-net-p2p/i2p initscript
-dev-util/scanmem gui -kde
-
-dev-libs/libxslt -crypt
-
-dev-libs/boehm-gc static-libs
-gnome-extra/zenity -webkit
-media-gfx/gimp -webkit
-net-libs/libproxy -webkit
-
-media-gfx/blender cycles player
-dev-python/setuptools
-dev-python/requests
-dev-python/numpy
-dev-python/chardet
-
-sci-libs/hdf5 -threads
-
-dev-cpp/glog gflags
-www-client/firefox-kde-opensuse gstreamer -libnotify system-cairo system-icu system-jpeg system-sqlite system-libvpx
-dev-libs/nss utils
-app-text/tesseract linguas_jp
-net-analyzer/metasploit gui
-net-analyzer/nmap gtk ncat ndiff nping
-
-media-libs/opencv examples doc java v4l ffmpeg
-dev-games/ogre cg
-app-office/akonadi-server soprano qt4 -qt5
-www-client/elinks ftp javascript -ruby
-net-im/qutim histman hunspell otr vkontakte purple webkit qml kinetic -sdl
-net-im/pidgin spell xscreensaver gstreamer gtk
-dev-libs/geoip city
-
-dev-qt/qt-creator -doc git android autotools -bazaar cmake -mercurial -subversion valgrind clang -qbs
-dev-qt/qtdeclarative:4 webkit
-dev-qt/qtdeclarative:5 localstorage
-dev-qt/linguist-tools:5 qml
-dev-qt/qtwebkit:4 icu
-dev-qt/designer -phonon -kde
-dev-qt/qthelp doc
-
-dev-qt/qtcore:5 icu
-dev-qt/qtquickcontrols:5 widgets
-dev-qt/qtwebkit:5 qml widgets
-dev-qt/qtgui:5 xcb accessibility
-
-app-emulation/xen-tools hvm qemu
-app-emulation/qemu -bluetooth gtk -spice -xen ssh virtfs xattr
-app-emulation/virt-manager gtk
-net-misc/spice-gtk python gtk3 usbredir
-net-libs/gtk-vnc python
+app-crypt/pinentry gnome-keyring gtk
+app-crypt/qca qt4 gpg
+app-doc/doxygen clang dot
 app-emulation/libvirt virt-network fuse nfs
 app-emulation/libvirt-glib python
-
-sys-kernel/gentoo-sources -symlink
-dev-python/setuptools python_targets_python3_5
-
-dev-games/mygui ogre -opengl
-dev-python/setuptools python_targets_python3_5
-dev-python/matplotlib -wxwidgets qt4 -qt5
-net-dns/dnsmasq script
-app-portage/layman git mercurial subversion gpg sync-plugin-portage
-
-kde-base/kfilemetadata epub ffmpeg taglib
-kde-plasma/kfilemetadata epub ffmpeg taglib
-dev-qt/qtchooser qt5
-sci-mathematics/octave gnuplot gui
-
-media-libs/chromaprint tools
-
-dev-lang/php mysql odbc sockets sqlite xmlrpc gd fpm apache2 mysqli cgi -oci8-instant-client
+app-emulation/qemu gtk -spice -xen ssh virtfs
+app-emulation/virt-manager gtk
+app-emulation/virtualbox qt4
+app-emulation/wine openal v4l staging s3tc pipelight d3d9 gstreamer -vaapi -netapi
 app-eselect/eselect-php fpm apache2
-www-servers/nginx nginx_modules_http_echo nginx_modules_http_push_stream nginx_modules_http_slowfs_cache nginx_modules_http_stub_status nginx_modules_http_upload_progress
-sys-auth/polkit-qt qt5 qt4
-
-dev-qt/qtmultimedia:5 qml widgets
-dev-qt/qtquick1:5 designer
-net-misc/networkmanager -dhclient -wext -wifi dhcpcd
-
-app-crypt/qca qt4 qt5 gpg
-media-libs/liblastfm qt4 -qt5
-dev-qt/qtscript:5 scripttools
-media-libs/libvpx postproc
-
-media-libs/phonon gstreamer vlc pulseaudio qt4
-media-libs/phonon-vlc qt4
-media-libs/phonon-gstreamer alsa qt4
-dev-libs/boost python
-net-libs/rb_libtorrent python
-
-net-p2p/ktorrent -handbook -mediaplayer -plasma -kross -scanfolder -ipfilter
-kde-apps/ksnapshot -kipi
-
-virtual/rubygems ruby_targets_ruby22
-dev-ruby/racc ruby_targets_ruby22
-dev-ruby/json ruby_targets_ruby22
-dev-ruby/rdoc ruby_targets_ruby22
-dev-ruby/rake ruby_targets_ruby22
-dev-ruby/rubygems ruby_targets_ruby22
-
-media-tv/v4l-utils qt4
-dev-util/cppcheck qt4
-app-doc/doxygen qt4
-x11-misc/lightdm -qt4 -kde gtk
+app-misc/anki -recording -sound
+app-office/libreoffice java jemalloc -python3_5
+app-portage/layman git mercurial subversion gpg sync-plugin-portage
+app-text/htmldoc fltk
 app-text/poppler qt4
-media-libs/dssi qt4
-media-libs/suil qt4
-
-sys-devel/gcc objc
-gnustep-base/gnustep-make libobjc2 native-exceptions
-media-sound/amsynth jack sndfile
-
-dev-qt/qt-mobility contacts multimedia tools connectivity feedback publishsubscribe qml sensors serviceframework systeminfo versit -doc
-
-dev-qt/qtnetwork:5 ssl
-dev-libs/libdbusmenu-qt qt5 qt4
-media-libs/libcanberra gtk
-games-emulation/fceux gtk
-sys-libs/ntdb python
-sys-libs/tevent python
-net-fs/samba client
-sys-libs/tdb python
-app-crypt/heimdal -ssl -threads
-app-crypt/pinentry gtk gnome-keyring
-app-cdr/kcdemu -linguas_de -linguas_es -linguas_pl -linguas_ro -linguas_sv -linguas_ru -linguas_jp
-
-dev-qt/qtwebkit:4 -gstreamer -icu -jit
-net-misc/dhcpcd -ipv6
-dev-python/PyQt4 -doc
-x11-libs/libqxt -doc
+dev-db/sqlite secure-delete
+dev-db/unixODBC -minimal
+dev-java/oracle-jdk-bin nsplugin jce javafx
 dev-lang/ghc binary
-media-video/smplayer qt5 -qt4
 dev-lang/mlton binary
-kde-base/* minimal
-
-kde-apps/kdeartwork-kscreensaver -kexiv2
-app-text/docbook-xsl-stylesheets -ruby
-sys-block/thin-provisioning-tools -test
-app-editors/vim -ruby
-
+dev-lang/php mysql odbc sockets sqlite xmlrpc gd mysqli cgi -oci8-instant-client fpm apache2
+dev-lang/python sqlite
+dev-libs/boost context python icu doc tools static-libs
+dev-libs/libdbusmenu-qt qt4
+dev-libs/libxslt -crypt
+dev-libs/protobuf python
+dev-libs/snowball-stemmer static-libs
+dev-qt/designer:4 -declarative -exceptions -kde -phonon -qt3support
+dev-qt/qt-creator autotools cmake git valgrind clangcodemodel clangstaticanalyzer
 dev-qt/qtsql:5 odbc
+dev-qt/qtwebkit:4 -exceptions -gstreamer -icu -jit
+dev-vcs/git tk
+dev-vcs/subversion -ruby
+games-util/steam-launcher steamruntime
+games-util/steam-meta steamruntime
+gnome-extra/zenity -webkit
+kde-apps/dolphin thumbnail
+kde-apps/kwalletd gpg
+kde-apps/okular chm djvu ebook -tiff -jpeg
+kde-frameworks/kfilemetadata epub ffmpeg taglib
+kde-frameworks/kwallet gpg
+kde-plasma/breeze qt4
+kde-plasma/plasma-desktop qt4
+media-gfx/gimp -webkit
+media-gfx/graphviz devil lasi postscript python -ruby
+media-libs/chromaprint tools
+media-libs/harfbuzz icu
+media-libs/libsamplerate sndfile
+media-libs/libvpx postproc
+media-libs/mesa gles2 d3d9
+media-libs/phonon qt4
+media-libs/phonon-vlc qt4
+media-libs/x264 10bit
+media-plugins/alsa-plugins jack ffmpeg
+media-plugins/gst-plugins-meta ffmpeg
+media-sound/amsynth jack sndfile
+media-sound/clementine -cdda moodbar vkontakte
+media-sound/fluidsynth jack
+media-sound/hydrogen jack ladspa
+media-sound/pulseaudio -asyncns -ipv6 jack
+media-sound/qsynth jack
+media-video/ffmpeg opus webp v4l bs2b
+media-video/mplayer bs2b
+media-video/vlc bluray libass lua taglib theora -libnotify -gcrypt -svg -libav vpx postproc
+net-analyzer/hydra gtk
+net-analyzer/nmap ncat ndiff nping zenmap
+net-analyzer/wireshark -gtk3
+net-dns/dnsmasq script
+net-dns/pdnsd isdn
+net-im/psi plugins extras iconsets webkit sql hunspell
+net-im/psi-plugins-meta captchaforms cleaner conferencelogger contentdownloader extendedmenu extendedoptions gmailservice historykeeper image otr qipxstatuses skins stopspam translate videostatus watcher autoreply
+net-libs/gtk-vnc python
 net-libs/libssh server
+net-libs/rb_libtorrent doc examples
+net-misc/networkmanager -dhclient -wext -wifi dhcpcd
+net-misc/spice-gtk python gtk3 usbredir
 net-p2p/gtk-gnutella gtk
-
-sys-libs/zlib static-libs
-
->=dev-python/packaging-15.3-r2 python_targets_python3_5
->=dev-python/certifi-2015.9.6.2 python_targets_python3_5
+sys-apps/smartmontools minimal
+sys-auth/polkit-qt qt4
+sys-block/gparted fat ntfs -kde
+sys-devel/gdb python
+sys-devel/llvm multitarget clang lldb gold video_cards_radeon
+sys-libs/glibc nscd profile
+sys-libs/libseccomp static-libs
+www-client/elinks ftp javascript -ruby
+www-client/firefox-kde-opensuse jemalloc3 hwaccel -gmp-autoupdate
+www-client/seamonkey -chatzilla gstreamer system-cairo system-icu system-jpeg system-sqlite
+x11-libs/libdrm libkms

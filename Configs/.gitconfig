@@ -1,16 +1,16 @@
 [core]
 	editor = vim
 	excludesfile = ~/.gitignore_global
-	autocrlf = input
+	autocrlf = false
 	whitespace = trailing-space
 	symlinks = true
-	
+
 [color]
 	diff = auto
 	status = auto
 	branch = auto
 	ui = true
-	
+
 [alias]
 	c = commit -S -a
 	cm = commit -S -am
@@ -33,34 +33,34 @@
 [merge]
 	#ff = only
 	commit = no
+	tool = meld
 
 [branch]
 	autosetupmerge = true
-	
+
 [diff]
 	renames = copies
-	
+	tool = meld
+
 [push]
 	default = upstream
-	
+
 [github]
 	user = YoukaiCat
-	
+
 [credential]
 	helper = cache
-	
+
+[diff "odf"]
+	binary = true
+	textconv = odt2txt --stdout
+
 [diff "word"]
 	binary = true
-	textconv = /usr/bin/antiword # catdoc, docx2txt, strings
-	
-[diff "odt"]
-	binary = true
-	textconv = /usr/bin/odt2txt
+	textconv = antiword # catdoc, docx2txt, strings
 
 [diff "exif"]
 	textconv = exiftool
-
-[filter "lfs"]
-	clean = git-lfs clean %f
-	smudge = git-lfs smudge %f
-	required = true
+[gui]
+	editor = kwrite
+	historybrowser = gitk
