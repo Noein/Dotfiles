@@ -2,10 +2,12 @@
 # ~/.bashrc
 #
 
+export CCACHE_DISABLE=1
+
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-export PATH=$HOME/.cabal/bin:$PATH
+export PATH=$HOME/.cabal/bin:$HOME/.cargo/bin:$PATH
 export EDITOR="vim"
 export LANG="en_US.utf8"
 export WINEARCH="win32"
@@ -46,7 +48,7 @@ if [ $UID -ne 0 ]; then
     alias svim='sudo vim'
     alias skill='sudo pkill'
     alias smount='sudo mount'
-    alias esync='sudo emerge --sync && sudo eix-update && eix-diff'
+    alias esync='sudo emerge --sync && sudo eix-update'
     alias eupdate='sudo emerge -av --update --newuse --deep --with-bdeps=y @world --verbose-conflicts'
     alias epostupdate='sudo emerge --depclean && sudo revdep-rebuild'
     alias qemustuff='sudo modprobe kvm-amd kvm vfio bridge tun && sudo /etc/init.d/apparmor stop && sudo /etc/init.d/samba start && sudo /etc/init.d/libvirtd start'

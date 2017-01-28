@@ -11,5 +11,14 @@ app-misc/secure-delete::luman
 app-portage/layman-dbtools
 
 kde-misc/kmozillahelper::bobwya
-#net-p2p/eiskaltdcpp::bobwya
 www-client/firefox-kde-opensuse::bobwya
+app-emulation/wine::bobwya
+
+dev-python/python-axolotl-curve25519
+dev-python/python-axolotl
+
+>=sys-devel/gcc-6.3.0
+
+=media-fonts/steamfonts-1
+
+dev-libs/libclc

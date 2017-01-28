@@ -1,5 +1,13 @@
 */*::nameless **
 */*::local_overlay **
 
-net-libs/tox **
-net-im/qtox **
+dev-python/python-axolotl **
+dev-python/python-axolotl-curve25519 **
+
+>=sys-devel/gcc-6.3.0 **
+
+=net-p2p/eiskaltdcpp-9999 **
+
+=kde-misc/kmozillahelper-9999 **
+
+=dev-libs/libclc-9999 **

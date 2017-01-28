@@ -17,3 +17,4 @@ net-im/psi-captchaforms::rion
 net-im/psi-image::rion
 net-im/psi-plugins-meta::rion
 net-im/psi-extendedmenu::rion
+net-im/psi-gnupg::rion

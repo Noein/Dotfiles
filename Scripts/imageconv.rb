@@ -17,7 +17,9 @@ class BatchImageConverter
 
   def convert
     Dir["#{@path}/*.#{@old_format}"].each do |filename|
-      %x[ convert #{filename} #{@path+filename[/[a-z0-9]*/i] + ".#{@format}"} ]
+      file = File.basename(filename)
+      puts file
+      %x[ convert #{@path}/#{file} #{@dest_path}/#{file.gsub(/\.[[:alnum:]]*/, ".#{@format}")} ]
     end
   end
 

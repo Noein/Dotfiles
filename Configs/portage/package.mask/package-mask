@@ -6,3 +6,8 @@
 */*::toolchain
 */*::tox-overlay
 */*::rion
+
+=net-p2p/zcash-9999
+=net-im/gajim-9999
+
+>=dev-libs/nss-3.28.1

@@ -1,8 +1,7 @@
-#dev-qt/qt-mobility contacts multimedia tools connectivity feedback publishsubscribe sensors serviceframework systeminfo versit -doc
-#net-p2p/eiskaltdcpp dht -libnotify -cli -spell
-#sci-physics/root -X -ruby -ldap -math -memstat -opengl -openmp -python -ssl -tiff -xml
-#sys-firmware/amdgpu-ucode legacy
-#www-servers/nginx nginx_modules_http_echo nginx_modules_http_push_stream nginx_modules_http_slowfs_cache nginx_modules_http_stub_status nginx_modules_http_upload_progress
+dev-qt/qt-mobility contacts multimedia tools connectivity feedback publishsubscribe sensors serviceframework systeminfo versit -doc
+net-p2p/eiskaltdcpp dht qt4 sqlite -libnotify -cli -spell
+sci-physics/root -X -ruby -ldap -math -memstat -opengl -openmp -python -ssl -tiff -xml
+www-servers/nginx nginx_modules_http_echo nginx_modules_http_push_stream nginx_modules_http_slowfs_cache nginx_modules_http_stub_status nginx_modules_http_upload_progress
 app-crypt/gcr gtk
 app-crypt/pinentry gnome-keyring gtk
 app-crypt/qca qt4 gpg
@@ -12,10 +11,10 @@ app-emulation/libvirt-glib python
 app-emulation/qemu gtk -spice -xen ssh virtfs
 app-emulation/virt-manager gtk
 app-emulation/virtualbox qt4
-app-emulation/wine openal v4l staging s3tc pipelight d3d9 gstreamer -vaapi -netapi
+app-emulation/wine openal v4l staging s3tc pipelight d3d9 gstreamer samba netapi -vaapi
 app-eselect/eselect-php fpm apache2
 app-misc/anki -recording -sound
-app-office/libreoffice java jemalloc -python3_5
+app-office/libreoffice java jemalloc
 app-portage/layman git mercurial subversion gpg sync-plugin-portage
 app-text/htmldoc fltk
 app-text/poppler qt4
@@ -25,14 +24,14 @@ dev-java/oracle-jdk-bin nsplugin jce javafx
 dev-lang/ghc binary
 dev-lang/mlton binary
 dev-lang/php mysql odbc sockets sqlite xmlrpc gd mysqli cgi -oci8-instant-client fpm apache2
-dev-lang/python sqlite
-dev-libs/boost context python icu doc tools static-libs
+dev-lang/python sqlite tk
+dev-libs/boost context python icu doc tools
 dev-libs/libdbusmenu-qt qt4
 dev-libs/libxslt -crypt
 dev-libs/protobuf python
 dev-libs/snowball-stemmer static-libs
 dev-qt/designer:4 -declarative -exceptions -kde -phonon -qt3support
-dev-qt/qt-creator autotools cmake git valgrind clangcodemodel clangstaticanalyzer
+dev-qt/qt-creator autotools cmake git valgrind clangcodemodel clangstaticanalyzer webengine
 dev-qt/qtsql:5 odbc
 dev-qt/qtwebkit:4 -exceptions -gstreamer -icu -jit
 dev-vcs/git tk
@@ -41,7 +40,6 @@ games-util/steam-launcher steamruntime
 games-util/steam-meta steamruntime
 gnome-extra/zenity -webkit
 kde-apps/dolphin thumbnail
-kde-apps/kwalletd gpg
 kde-apps/okular chm djvu ebook -tiff -jpeg
 kde-frameworks/kfilemetadata epub ffmpeg taglib
 kde-frameworks/kwallet gpg
@@ -52,7 +50,7 @@ media-gfx/graphviz devil lasi postscript python -ruby
 media-libs/chromaprint tools
 media-libs/harfbuzz icu
 media-libs/libsamplerate sndfile
-media-libs/libvpx postproc
+media-libs/libvpx postproc svc
 media-libs/mesa gles2 d3d9
 media-libs/phonon qt4
 media-libs/phonon-vlc qt4
@@ -63,11 +61,11 @@ media-sound/amsynth jack sndfile
 media-sound/clementine -cdda moodbar vkontakte
 media-sound/fluidsynth jack
 media-sound/hydrogen jack ladspa
-media-sound/pulseaudio -asyncns -ipv6 jack
+media-sound/pulseaudio -asyncns -ipv6 jack gnome
 media-sound/qsynth jack
-media-video/ffmpeg opus webp v4l bs2b
-media-video/mplayer bs2b
-media-video/vlc bluray libass lua taglib theora -libnotify -gcrypt -svg -libav vpx postproc
+media-video/ffmpeg opus webp v4l vpx zvbi theora speex libass
+virtual/ffmpeg opus
+media-video/vlc bluray libass lua taglib theora -libnotify -gcrypt -svg -libav vpx postproc zvbi twolame speex opus
 net-analyzer/hydra gtk
 net-analyzer/nmap ncat ndiff nping zenmap
 net-analyzer/wireshark -gtk3
@@ -77,7 +75,7 @@ net-im/psi plugins extras iconsets webkit sql hunspell
 net-im/psi-plugins-meta captchaforms cleaner conferencelogger contentdownloader extendedmenu extendedoptions gmailservice historykeeper image otr qipxstatuses skins stopspam translate videostatus watcher autoreply
 net-libs/gtk-vnc python
 net-libs/libssh server
-net-libs/rb_libtorrent doc examples
+net-libs/rb_libtorrent python
 net-misc/networkmanager -dhclient -wext -wifi dhcpcd
 net-misc/spice-gtk python gtk3 usbredir
 net-p2p/gtk-gnutella gtk
@@ -85,10 +83,64 @@ sys-apps/smartmontools minimal
 sys-auth/polkit-qt qt4
 sys-block/gparted fat ntfs -kde
 sys-devel/gdb python
-sys-devel/llvm multitarget clang lldb gold video_cards_radeon
+sys-devel/llvm clang lldb gold video_cards_radeon default-compiler-rt default-libcxx llvm_targets_AMDGPU
 sys-libs/glibc nscd profile
 sys-libs/libseccomp static-libs
 www-client/elinks ftp javascript -ruby
-www-client/firefox-kde-opensuse jemalloc3 hwaccel -gmp-autoupdate
+www-client/firefox-kde-opensuse jemalloc jemalloc3 hwaccel gtk2
 www-client/seamonkey -chatzilla gstreamer system-cairo system-icu system-jpeg system-sqlite
-x11-libs/libdrm libkms
+x11-libs/libdrm libkms video_cards_radeon
+media-gfx/imagemagick postscript png graphviz djvu
+app-text/ghostscript-gpl cups
+media-video/avidemux qt4
+media-libs/avidemux-plugins qt4
+media-libs/mlt ffmpeg -ruby -vdpau
+media-libs/libmypaint gegl
+net-im/gajim idle
+sys-libs/ntdb python
+net-fs/samba winbind -system-mitkrb5
+app-crypt/heimdal -ssl
+sys-libs/tdb python
+sys-libs/tevent python
+net-dns/bind-tools gssapi
+media-libs/freetype -cleartype_hinting
+x11-misc/xnee gnome
+dev-python/PyQt5 webkit printsupport
+dev-qt/qtwebkit:5 printsupport
+app-editors/vim cscope racket python lua
+app-editors/gvim gtk3 cscope racket python lua
+app-emacs/ghc-mod emacs
+app-editors/emacs toolkit-scroll-bars xft
+net-misc/youtube-dl offensive
+sys-devel/clang-runtime libcxx
+sys-firmware/amdgpu-ucode legacy
+x11-drivers/amdgpu-pro opencl
+net-misc/openvpn socks
+sys-libs/zlib static-libs
+sys-libs/libcxx libcxxabi libunwind -libcxxrt
+sys-libs/libcxxabi libunwind
+dev-libs/leveldb -tcmalloc
+sys-process/tini static
+x11-libs/qscintilla -qt5 qt4
+media-libs/libmygpo-qt qt4
+
+>=dev-ruby/kpeg-1.1.0 ruby_targets_ruby24
+>=dev-ruby/net-telnet-0.1.1-r1 ruby_targets_ruby24
+>=dev-ruby/rdoc-5.0.0-r3 ruby_targets_ruby24
+>=virtual/rubygems-12 ruby_targets_ruby24
+>=dev-ruby/power_assert-0.4.1 ruby_targets_ruby24
+>=dev-ruby/minitest-5.10.1 ruby_targets_ruby24
+>=dev-ruby/racc-1.4.14 ruby_targets_ruby24
+>=dev-ruby/rubygems-2.6.8 ruby_targets_ruby24
+>=dev-ruby/rake-12.0.0 ruby_targets_ruby24
+>=dev-ruby/test-unit-3.2.3 ruby_targets_ruby24
+>=dev-ruby/json-2.0.3 ruby_targets_ruby24
+>=dev-ruby/did_you_mean-1.1.0 ruby_targets_ruby24
+>=dev-ruby/xmlrpc-0.2.1 ruby_targets_ruby24
+
+dev-libs/link-grammar java
+net-libs/gnutls tools
+
+sys-apps/flatpak introspection gtk gnome
+dev-libs/libclc #clang
+

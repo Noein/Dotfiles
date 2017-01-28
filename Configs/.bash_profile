@@ -2,7 +2,8 @@
 # ~/.bash_profile
 #
 
-PATH="/usr/lib/ccache/bin:${PATH}" # ccache
+#PATH="/usr/lib/ccache/bin:${PATH}" # ccache
+export CCACHE_DISABLE=1
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 
